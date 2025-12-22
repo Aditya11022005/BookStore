@@ -1,5 +1,7 @@
+import { emailVerificationLink } from "@/email/emailVerificationLink";
 import { connectDB } from "@/lib/databaseConnection";
-import { response } from "@/lib/helperFunction";
+import { catchError, response } from "@/lib/helperFunction";
+import { sendMail } from "@/lib/sendMail";
 import { zSchema } from "@/lib/zodSchema";
 
 
@@ -47,11 +49,28 @@ export async function POST(request){
         password
     })
 
+
+
     await NewRegistration.save()
 
+    const secret = new TextEncoder().encode(process.env.SECRET_KEY)
+    const token = await new SignJWT({userId: NewRegistration._id})
+    .setIssuedAt()
+    .setExpirationTime("1h")
+    .setProtectedHeader({alg: "HS256"})
+    .sign(secret)
+
+
+await sendMail('Email Verification request from Pustak Maza',email,emailVerificationLink(`${process.env.NEXT_PUBLIC_BASE_URL}/verify-email/${token}`))
+
+
+    return response(true,200,"User registered successfully. Please verify your email address to activate your account.");
+
+    
 }
     catch(error){
 
+        catchError(error)
 
 
     }
