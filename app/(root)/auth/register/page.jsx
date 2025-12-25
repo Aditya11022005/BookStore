@@ -3,6 +3,7 @@ import "./Register.css"
 import Image from "next/image";
 import loginimg from "../images/pustakma.png";
 import Link from 'next/link';
+import { WEBSITE_LOGIN } from '@/routes/WebsiteRoute';
 
 const RegisterPage = () => {
   return (
@@ -27,7 +28,7 @@ const RegisterPage = () => {
                <button type="submit">Register</button>
              </form>
              <div className="moreOptionforForm">
-               <p>You have an account?<Link href="/auth/login"> Login</Link></p>
+               <p>You have an account?<Link href= {WEBSITE_LOGIN}> Login</Link></p>
              </div>
            </div>
          </div>
