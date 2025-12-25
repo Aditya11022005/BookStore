@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 
 import Image from "next/image"
@@ -23,8 +24,19 @@ import {
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import z from "zod"
+=======
+"use client";
+import React, { useState } from "react";
+import "./login.css"
+import Image from "next/image";
+import loginimg from "../images/pustakma.png";
+import Link from 'next/link';
+>>>>>>> c2040d55880059f3c58ebebd61fe212ce9fe1bb4
+
+import Spinner from '../../../../components/ui/SpinnerBadge';
 
 const LoginPage = () => {
+<<<<<<< HEAD
 
   const [showPassword, setShowPassword] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -154,6 +166,40 @@ const LoginPage = () => {
             </Link>
           </p>
 
+=======
+    const [isLoading,setLoading] = useState(false);
+
+    const handleLogin = async(e) =>{
+        e.preventDefault();
+        setLoading(true);
+        // here you will call login API
+       await new Promise((r) => setTimeout(r, 2000));
+        setLoading(false);
+    }
+
+  return (
+    <div>
+      <div className="login-container">
+        <div className="login-img">
+          <Image src={loginimg} alt="loginimage" className="loginimage"/>
+        </div>
+        <div className="login-form">
+          <h2>Login</h2>
+          <form onSubmit={handleLogin}>
+            <label htmlFor="username">Email</label><br />
+            <input type="email" /><br />
+            <span className='errormsg'>enter valid email</span> <br />
+            <label htmlFor="password">Password</label><br />
+            <input type="password" /><br />
+            <span className='errormsg'>enter valid password</span> <br />
+             {isLoading ? <Spinner /> : <button type="submit">Login</button>}
+          </form>
+          <div className="moreOptionforForm">
+            <p>Don't have an account?<Link href="/auth/register"> Register</Link></p>
+            <span>OR</span>
+            <p><a href="/auth/forgotpassword">Forgot Password?</a></p>
+          </div>
+>>>>>>> c2040d55880059f3c58ebebd61fe212ce9fe1bb4
         </div>
       </div>
     </div>
