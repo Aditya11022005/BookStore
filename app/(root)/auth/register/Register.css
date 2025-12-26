@@ -135,3 +135,19 @@
         transform: scale(1);
     }
 }
+
+@media (max-width: 800px) {
+    .login-container {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+    .login-img,
+    .login-form {
+        width: 80%;
+    }
+    .login-form {
+        margin-top: 20px;
+        padding: 30px;
+    }
+}

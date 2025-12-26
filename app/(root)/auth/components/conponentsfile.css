@@ -88,6 +88,9 @@ button {
 .forgotpassword {
     background-color: #f5f5f5;
     padding: 20px;
+    display: flex;
+    align-items: center;
+    height: 100vh;
 }
 
 .forgotpassword .container {
@@ -121,4 +124,10 @@ button {
     border: none;
     background-color: #411872;
     color: #fff;
+}
+
+.setpaaform label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: -25px;
 }

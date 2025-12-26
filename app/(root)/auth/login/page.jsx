@@ -38,7 +38,7 @@ const LoginPage = () => {
           <div className="moreOptionforForm">
             <p>Don't have an account?<Link href="/auth/register"> Register</Link></p>
             <span>OR</span>
-            <p><a href="/auth/forgotpassword">Forgot Password?</a></p>
+            <p><Link href="/auth/resetpassword">Forgot Password?</Link></p>
           </div>
         </div>
       </div>
