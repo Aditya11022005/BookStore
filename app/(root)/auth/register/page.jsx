@@ -4,8 +4,12 @@ import "./Register.css"
 import Image from "next/image";
 import loginimg from "../images/pustakma.png";
 import Link from 'next/link';
+<<<<<<< HEAD
+import { WEBSITE_LOGIN } from '@/routes/WebsiteRoute';
+=======
 import SendOTP from '../components/SendOTP';
 import Spinner from '../../../../components/ui/SpinnerBadge';
+>>>>>>> c2040d55880059f3c58ebebd61fe212ce9fe1bb4
 
 const RegisterPage = () => {
   
@@ -44,7 +48,7 @@ const RegisterPage = () => {
 
              </form>
              <div className="moreOptionforForm">
-               <p>You have an account?<Link href="/auth/login"> Login</Link></p>
+               <p>You have an account?<Link href= {WEBSITE_LOGIN}> Login</Link></p>
              </div>
            </div>
          </div>
