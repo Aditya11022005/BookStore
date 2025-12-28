@@ -42,7 +42,7 @@ const Header = () => {
             <ul>
               <li><Link className="listbtn" href="/my-account"><FaUser /> <span className='listbtntext'>Account</span></Link></li>
               <li><Link className="listbtn" href="/checkout"><FaShoppingBag /> <span className='listbtntext'>Cart</span></Link></li>
-              <li><Link className="listbtn" href="#"><FaHeart /> <span className='listbtntext'>Wishlist</span></Link></li>
+              <li><Link className="listbtn" href="/wishlist"><FaHeart /> <span className='listbtntext'>Wishlist</span></Link></li>
             </ul>
           </div>
 
@@ -55,9 +55,9 @@ const Header = () => {
         {/* PAGE MENU */}
         <div className={`page-list ${menuOpen ? "active" : ""}`}>
           <ul>
-            <li><Link href="#">HOME</Link></li>
+            <li><Link href="/">HOME</Link></li>
             <li><Link href="#">ABOUT US</Link></li>
-            <li><Link href="#">BOOKS</Link></li>
+            <li><Link href="/booklist">BOOKS</Link></li>
             <li><Link href="#">NEW RELEASE</Link></li>
             <li><Link href="#">CONTACT US</Link></li>
             <li><Link href="#">BLOG</Link></li>
