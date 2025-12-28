@@ -40,8 +40,8 @@ const Header = () => {
 
           <div className="lists desktop-only">
             <ul>
-              <li><Link className="listbtn" href="#"><FaUser /> <span className='listbtntext'>Account</span></Link></li>
-              <li><Link className="listbtn" href="#"><FaShoppingBag /> <span className='listbtntext'>Cart</span></Link></li>
+              <li><Link className="listbtn" href="/my-account"><FaUser /> <span className='listbtntext'>Account</span></Link></li>
+              <li><Link className="listbtn" href="/checkout"><FaShoppingBag /> <span className='listbtntext'>Cart</span></Link></li>
               <li><Link className="listbtn" href="#"><FaHeart /> <span className='listbtntext'>Wishlist</span></Link></li>
             </ul>
           </div>
