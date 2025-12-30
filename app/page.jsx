@@ -1,9 +1,14 @@
-import React from 'react'
+import BookGrid from "@/components/books/BookGrid";
 
-const page = () => {
+export default function HomePage() {
   return (
-    <div>page</div>
-  )
-}
+    <main className="container mx-auto px-6 py-10">
+      <h1 className="text-3xl font-bold">📚 Book Store</h1>
+      <p className="text-muted-foreground mt-2">
+        Read books with a smooth, modern reader experience.
+      </p>
 
-export default page
+      <BookGrid />
+    </main>
+  );
+}
